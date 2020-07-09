@@ -51,10 +51,8 @@ namespace ManageYourTime.Tests
             Task task = new Task("pass the test", "meeting", false, DateTime.Today);
             tasksCollection.ListWithTasks.Add(task);
 
-            Task newTask = new Task("pass the test", "meeting", false, DateTime.Today);
-
             // Act
-            bool taskExists = tasksCollection.checkIfTaskExists(newTask.Tytul, DateTime.Today);
+            bool taskExists = tasksCollection.checkIfTaskExists(task.Tytul, DateTime.Today);
             
             // Assert
             Assert.IsTrue(taskExists);
